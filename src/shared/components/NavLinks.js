@@ -3,21 +3,21 @@ import {NavLink} from 'react-router-dom'
 
 import './NavLinks.css'
 
-function NavLinks(){
+function NavLinks(props){
     return (
         <ul className="nav-links">
             <li>
-                <NavLink to="/">
+                <NavLink to="/" onClick={props.onClick} exact>
                     Home
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/auth">
+                <NavLink to="/auth" onClick={props.onClick}>
                     Login
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/Cart">
+                <NavLink to="/Cart" onClick={props.onClick}>
                     Cart
                 </NavLink>
             </li>

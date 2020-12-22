@@ -1,4 +1,4 @@
-.nav-links {
+/* .nav-links {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -46,7 +46,69 @@
   .nav-links button:active {
     background: #292929;
     color: white;
+  } */
+
+  .nav-links a:active,
+  .nav-links a.active {
+    border-bottom: solid white;
   }
+
+.nav-links{
+  list-style: none;
+  padding: 0;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: right;
+  float: right;
+}
+
+.nav-links li{
+  padding: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  height: 20px;
+  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  position: relative;
+}
+
+.nav-links li::after{
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: white;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-links li:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-links li a {
+  border: 1px solid transparent;
+  color: white;
+  text-decoration: none;
+  height: 100%;
+}
+
+
+ .nav-links li a:active{
+  color: blue;
+} 
+
+.nav-links li:hover{
+  color: blue;
+}
   
   @media (min-width: 768px) {
     .nav-links {

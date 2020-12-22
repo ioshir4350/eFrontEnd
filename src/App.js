@@ -46,8 +46,14 @@ function App() {
   } else{
     routes = (
       <Switch>
-        <Route path="/">
+        <Route path="/" exact>
           <h1>hey</h1>
+        </Route>
+        <Route path="/auth">
+          <h1>Login</h1>
+        </Route>
+        <Route path="/Cart">
+          <h1>Cart</h1>
         </Route>
         <Redirect to="/auth" />
       </Switch>
